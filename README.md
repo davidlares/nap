@@ -1,6 +1,6 @@
 # Nap Library
 
-This workshop is a `CLI` project that encapsulates resources and actions for interacting with REST `API's`. Basically, this library allows to build and call REST `API's` by conforming and acting as a bunch of cohesive layers that represents an abstraction of the `GoLang`'s standard `http` package.
+This workshop is a `CLI` project that encapsulates resources and actions for interacting with REST `API's`. Basically, this library allows us to build and call REST `API's` by conforming and acting as a bunch of cohesive layers that represents an abstraction of `GoLang`'s standard `HTTP` package.
 
 ## Dependencies
 
