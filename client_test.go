@@ -9,7 +9,7 @@ import (
 func TestProcessRequest(t *testing.T) {
   client := NewClient()
   router := NewRouter()
-  router.RegisterFunc(200, func(resp *http.Response, _ interface{}) error {
+  router.RegisterFunc(200, func(resp *http.Response) error {
     return nil
   })
   res := NewResource("/get", "GET", router)

@@ -48,10 +48,12 @@ func (c *Client) ProcessRequest(baseURL string, res *RestResource, params map[st
     return err
   }
   // calling function
-  if err := res.Router.CallFunc(resp, nil); err != nil {
-    return err
-  }
-  return nil
+  // if err := res.Router.CallFunc(resp, nil); err != nil {
+  //   return err
+  // }
+  // return nil
+  return res.Router.CallFunc(resp)
+
 }
 
 func buildClientRequest(method, url string, payload interface{}) *http.Request {

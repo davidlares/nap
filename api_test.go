@@ -9,7 +9,7 @@ import (
 func TestAPICall(t *testing.T) {
   api := NewAPI("https://httpbin.org")
   router := NewRouter()
-  router.RegisterFunc(200, func(resp *http.Response, _ interface{}) error {
+  router.RegisterFunc(200, func(resp *http.Response) error {
     return nil
   })
   res := NewResource("/get", "GET", router)
@@ -26,7 +26,7 @@ func TestAPICall(t *testing.T) {
 func TestAPIAuth(t *testing.T) {
   api := NewAPI("https://httpbin.org")
   router := NewRouter()
-  router.RegisterFunc(200, func(resp *http.Response, _ interface{}) error {
+  router.RegisterFunc(200, func(resp *http.Response) error {
     return nil
   })
   res := NewResource("/basic-auth/{{.user}}/{{.pass}}", "GET", router)
