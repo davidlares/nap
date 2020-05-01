@@ -14,9 +14,15 @@ Clone this repository inside your `src` directory and install it using the follo
 
 `go install ./cmd/...`
 
-Then
+Then, inside `cmd/nap` directory just, `nap []`
 
-`go build` or `go run` to the `main.go` file inside the `cmd/nap` directory.
+For help: `nap -help`
+
+### Available commands
+
+1. `nap -help`: this command will display the help structure for available commands
+2. `nap -list`: this shows all the commands available to use
+3. `nap get [url]`: (new) the `get` command can also receive an optional POST payload in the request (body structure)
 
 ## Resource
 

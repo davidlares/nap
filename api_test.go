@@ -14,7 +14,7 @@ func TestAPICall(t *testing.T) {
   })
   res := NewResource("/get", "GET", router)
   api.AddResource("get", res)
-  if err := api.Call("get", nil); err != nil {
+  if err := api.Call("get", nil, nil ); err != nil {
     t.Fail()
   }
   resources := api.ResourceNames()
@@ -38,7 +38,7 @@ func TestAPIAuth(t *testing.T) {
   if err := api.Call("basicauth", map[string]string{
     "user": "user",
     "pass": "passw0rd",
-    }); err != nil {
+    }, nil ); err != nil {
     t.Fail()
   }
 }
